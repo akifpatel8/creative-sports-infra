@@ -1,3 +1,18 @@
+import basketBallPpTiles from '../../../Assets/sports/basket_ball_pp_tiles.jpeg';
+import basketBallPu from '../../../Assets/sports/basket_ball_pu.jpeg';
+import basketBallSynthetic from '../../../Assets/sports/basket_ball_synthetic.jpeg';
+import indoorPvc from '../../../Assets/sports/indoor_pvc_flooring.jpeg';
+import woodenFlooring from '../../../Assets/sports/mapple_wodden_flooring.jpeg';
+import purRunningTrack from '../../../Assets/sports/pur_rinning_track.jpeg';
+import runningTrack from '../../../Assets/sports/running_track.jpeg';
+import sandwichTrack from '../../../Assets/sports/synthetic_sandwitch_track.jpeg';
+import tennisCourtPpTiles from '../../../Assets/sports/tennis_court_pp_tiles.jpeg';
+import tennisCourtPu from '../../../Assets/sports/tennis_court_pu.jpeg';
+import tennisCourtSynthetic from '../../../Assets/sports/tennis_court_synthetic.jpeg';
+import volleyBallIndoorPvc from '../../../Assets/sports/volley_ball_indoor_pvc.webp';
+import volleyBallPu from '../../../Assets/sports/volley_ball_pu.jpg';
+import volleyBallSynthetic from '../../../Assets/sports/volley_ball_synthetic.webp';
+
 export type SportSubcategory = {
   id: string;
   name: string;
@@ -26,393 +41,299 @@ export function isValidSportId(id: string | null | undefined): id is string {
 
 export const SPORTS_PRODUCTS: SportProduct[] = [
   {
-    id: "athletic-running-track",
-    title: "Athletic running track",
+    id: 'athletic-running-track',
+    title: 'Athletic running track',
     description:
-      "IAAF-aligned running tracks with layered synthetic systems for schools, colleges, and professional athletics venues.",
-    imageSrc: "../../../../Assets/sports/pur_rinning_track.jpeg",
+      'IAAF-aligned running tracks with layered synthetic systems for schools, colleges, and professional athletics venues.',
+    imageSrc: purRunningTrack,
     subcategories: [
       {
-        id: "spray-coat",
-        name: "Synthetic spray coat system",
+        id: 'spray-coat',
+        name: 'Synthetic spray coat system',
         description:
-          "Spray-applied synthetic surface for training tracks and school athletics facilities.",
-        images: [
-          "../../../../Assets/sports/running_track.jpeg",
-          "https://images.unsplash.com/photo-1571902940002-4fd9d0b4f5b6?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Spray-applied synthetic surface for training tracks and school athletics facilities.',
+        images: [runningTrack, sandwichTrack, purRunningTrack],
       },
       {
-        id: "sandwich",
-        name: "Synthetic sandwich track system",
+        id: 'sandwich',
+        name: 'Synthetic sandwich track system',
         description:
-          "Multi-layer sandwich construction for improved shock absorption and durability.",
-        images: [
-          "../../../../Assets/sports/synthetic_sandwitch_track.jpeg",
-          "https://images.unsplash.com/photo-1461896830458-677821998977?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Multi-layer sandwich construction for improved shock absorption and durability.',
+        images: [sandwichTrack, runningTrack],
       },
       {
-        id: "full-pur",
-        name: "Full PUR running track",
+        id: 'full-pur',
+        name: 'Full PUR running track',
         description:
-          "Full polyurethane systems for competition-grade tracks and elite training venues.",
-        images: [
-          "../../../../Assets/sports/pur_rinning_track.jpeg",
-          "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1461896830458-677821998977?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Full polyurethane systems for competition-grade tracks and elite training venues.',
+        images: [purRunningTrack, runningTrack, sandwichTrack],
       },
     ],
   },
   {
-    id: "basketball-court",
-    title: "Basketball court",
+    id: 'basketball-court',
+    title: 'Basketball court',
     description:
-      "Indoor and outdoor basketball courts with flooring options tuned for grip, shock absorption, and long-term durability.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&auto=format&fit=crop&q=80",
+      'Indoor and outdoor basketball courts with flooring options tuned for grip, shock absorption, and long-term durability.',
+    imageSrc: basketBallSynthetic,
     subcategories: [
       {
-        id: "acrylic",
-        name: "Acrylic synthetic sports flooring",
+        id: 'acrylic',
+        name: 'Acrylic synthetic sports flooring',
         description:
-          "UV-stable acrylic coatings for outdoor courts with consistent ball bounce.",
-        images: [
-          "../../../../Assets/sports/basket_ball_synthetic.jpeg",
-          "https://images.unsplash.com/photo-1577416412292-747c6607f055?w=900&auto=format&fit=crop&q=80",
-        ],
+          'UV-stable acrylic coatings for outdoor courts with consistent ball bounce.',
+        images: [basketBallSynthetic, basketBallPu],
       },
       {
-        id: "pvc",
-        name: "Indoor PVC flooring",
+        id: 'pvc',
+        name: 'Indoor PVC flooring',
         description:
-          "Resilient PVC sports flooring for indoor arenas and multi-purpose halls.",
-        images: [
-          "../../../../Assets/sports/indoor_pvc_flooring.jpeg",
-          "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Resilient PVC sports flooring for indoor arenas and multi-purpose halls.',
+        images: [indoorPvc, volleyBallIndoorPvc],
       },
       {
-        id: "wooden",
-        name: "Wooden flooring",
+        id: 'wooden',
+        name: 'Wooden flooring',
         description:
-          "Sprung hardwood systems for professional indoor basketball and training centers.",
-        images: [
-          "../../../../Assets/sports/mapple_wodden_flooring.jpeg",
-          "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Sprung hardwood systems for professional indoor basketball and training centers.',
+        images: [woodenFlooring, basketBallSynthetic],
       },
       {
-        id: "pp-tiles",
-        name: "PP tiles",
+        id: 'pp-tiles',
+        name: 'PP tiles',
         description:
-          "Interlocking polypropylene tiles for modular courts and quick installation.",
-        images: [
-          "../../../../Assets/sports/basket_ball_pp_tiles.jpeg",
-          "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Interlocking polypropylene tiles for modular courts and quick installation.',
+        images: [basketBallPpTiles, tennisCourtPpTiles],
       },
       {
-        id: "pu",
-        name: "PU flooring",
+        id: 'pu',
+        name: 'PU flooring',
         description:
-          "Polyurethane cushioned surfaces for high-impact play and joint protection.",
-        images: [
-          "../../../../Assets/sports/basket_ball_pu.jpeg",
-          "https://images.unsplash.com/photo-1577416412292-747c6607f055?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Polyurethane cushioned surfaces for high-impact play and joint protection.',
+        images: [basketBallPu, basketBallSynthetic, indoorPvc],
       },
     ],
   },
   {
-    id: "tennis-court",
-    title: "Tennis court",
+    id: 'tennis-court',
+    title: 'Tennis court',
     description:
-      "Hard and cushioned tennis court surfaces with line marking, fencing integration, and weather-resistant top coats.",
-    imageSrc: "../../../../Assets/sports/tennis_court_synthetic.jpeg",
+      'Hard and cushioned tennis court surfaces with line marking, fencing integration, and weather-resistant top coats.',
+    imageSrc: tennisCourtSynthetic,
     subcategories: [
       {
-        id: "acrylic",
-        name: "Acrylic synthetic sports flooring",
+        id: 'acrylic',
+        name: 'Acrylic synthetic sports flooring',
         description:
-          "Textured acrylic systems for hard courts with all-weather performance.",
-        images: [
-          "../../../../Assets/sports/tennis_court_synthetic.jpeg",
-          "https://images.unsplash.com/photo-1622163642999-6b47a83c9d3f?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Textured acrylic systems for hard courts with all-weather performance.',
+        images: [tennisCourtSynthetic, tennisCourtPu],
       },
       {
-        id: "pu",
-        name: "PU flooring",
+        id: 'pu',
+        name: 'PU flooring',
         description:
-          "Cushioned PU tennis surfaces for reduced fatigue and consistent pace.",
-        images: [
-          "../../../../Assets/sports/tennis_court_pu.jpeg",
-          "https://images.unsplash.com/photo-1554068864-24f776c8782c?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Cushioned PU tennis surfaces for reduced fatigue and consistent pace.',
+        images: [tennisCourtPu, tennisCourtSynthetic],
       },
       {
-        id: "pp-tiles",
-        name: "PP tiles",
+        id: 'pp-tiles',
+        name: 'PP tiles',
         description:
-          "Modular tile systems for practice courts and temporary installations.",
-        images: [
-          "../../../../Assets/sports/tennis_court_pp_tiles.jpeg",
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Modular tile systems for practice courts and temporary installations.',
+        images: [tennisCourtPpTiles, tennisCourtSynthetic],
       },
     ],
   },
   {
-    id: "volleyball-court",
-    title: "Volleyball court",
+    id: 'volleyball-court',
+    title: 'Volleyball court',
     description:
-      "Indoor and outdoor volleyball courts with surfaces engineered for grip, shock absorption, and safe diving play.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=900&auto=format&fit=crop&q=80",
+      'Indoor and outdoor volleyball courts with surfaces engineered for grip, shock absorption, and safe diving play.',
+    imageSrc: volleyBallPu,
     subcategories: [
       {
-        id: "acrylic",
-        name: "Acrylic synthetic sports flooring",
+        id: 'acrylic',
+        name: 'Acrylic synthetic sports flooring',
         description:
-          "Durable acrylic coatings for outdoor volleyball courts and school facilities.",
-        images: [
-          "../../../../Assets/sports/volley_ball_synthetic.webp",
-          "https://images.unsplash.com/photo-1479859546309-cd77fa21c8f6?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Durable acrylic coatings for outdoor volleyball courts and school facilities.',
+        images: [volleyBallSynthetic, basketBallSynthetic],
       },
       {
-        id: "pvc",
-        name: "Indoor PVC flooring",
+        id: 'pvc',
+        name: 'Indoor PVC flooring',
         description:
-          "Resilient PVC systems for indoor volleyball halls and training centers.",
-        images: [
-          "../../../../Assets/sports/volley_ball_indoor_pvc.webp",
-          "https://images.unsplash.com/photo-1577416412292-747c6607f055?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Resilient PVC systems for indoor volleyball halls and training centers.',
+        images: [volleyBallIndoorPvc, indoorPvc],
       },
       {
-        id: "pu",
-        name: "PU flooring",
+        id: 'pu',
+        name: 'PU flooring',
         description:
-          "Cushioned polyurethane flooring for competitive indoor volleyball.",
-        images: [
-          "../../../../Assets/sports/volley_ball_pu.jpg",
-          "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Cushioned polyurethane flooring for competitive indoor volleyball.',
+        images: [volleyBallPu, volleyBallIndoorPvc],
       },
     ],
   },
   {
-    id: "badminton-court",
-    title: "Badminton court",
+    id: 'badminton-court',
+    title: 'Badminton court',
     description:
-      "Professional badminton courts with flooring suited for quick footwork, consistent bounce, and indoor climate control.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=900&auto=format&fit=crop&q=80",
+      'Professional badminton courts with flooring suited for quick footwork, consistent bounce, and indoor climate control.',
+    imageSrc: indoorPvc,
     subcategories: [
       {
-        id: "pvc",
-        name: "Indoor PVC flooring",
+        id: 'pvc',
+        name: 'Indoor PVC flooring',
         description:
-          "PVC sports flooring with optimal slip resistance for badminton academies.",
-        images: [
-          "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1577416412292-747c6607f055?w=900&auto=format&fit=crop&q=80",
-        ],
+          'PVC sports flooring with optimal slip resistance for badminton academies.',
+        images: [indoorPvc, volleyBallIndoorPvc],
       },
       {
-        id: "wooden",
-        name: "Wooden flooring",
+        id: 'wooden',
+        name: 'Wooden flooring',
         description:
-          "Sprung wooden courts for tournament-grade indoor badminton facilities.",
-        images: [
-          "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Sprung wooden courts for tournament-grade indoor badminton facilities.',
+        images: [woodenFlooring, indoorPvc],
       },
       {
-        id: "pp-tiles",
-        name: "PP tiles",
+        id: 'pp-tiles',
+        name: 'PP tiles',
         description:
-          "Interlocking PP tiles for modular badminton courts and multi-use halls.",
-        images: [
-          "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Interlocking PP tiles for modular badminton courts and multi-use halls.',
+        images: [basketBallPpTiles, tennisCourtPpTiles],
       },
     ],
   },
   {
-    id: "pickleball-court",
-    title: "Pickleball court",
+    id: 'pickleball-court',
+    title: 'Pickleball court',
     description:
-      "Dedicated pickleball courts with surfaces tuned for traction, ball response, and year-round outdoor use.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1554068864-24f776c8782c?w=900&auto=format&fit=crop&q=80",
+      'Dedicated pickleball courts with surfaces tuned for traction, ball response, and year-round outdoor use.',
+    imageSrc: tennisCourtSynthetic,
     subcategories: [
       {
-        id: "acrylic",
-        name: "Acrylic synthetic sports flooring",
+        id: 'acrylic',
+        name: 'Acrylic synthetic sports flooring',
         description:
-          "Textured acrylic surfaces for outdoor pickleball courts and community centers.",
-        images: [
-          "https://images.unsplash.com/photo-1554068864-24f776c8782c?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1622163642999-6b47a83c9d3f?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Textured acrylic surfaces for outdoor pickleball courts and community centers.',
+        images: [tennisCourtSynthetic, basketBallSynthetic],
       },
       {
-        id: "pp-tiles",
-        name: "PP tiles",
+        id: 'pp-tiles',
+        name: 'PP tiles',
         description:
-          "Modular PP tile systems for quick-install pickleball courts.",
-        images: [
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1554068864-24f776c8782c?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Modular PP tile systems for quick-install pickleball courts.',
+        images: [tennisCourtPpTiles, basketBallPpTiles],
       },
     ],
   },
   {
-    id: "squash-court",
-    title: "Squash court",
+    id: 'squash-court',
+    title: 'Squash court',
     description:
-      "Enclosed squash courts with premium wooden flooring for consistent bounce and player safety.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
+      'Enclosed squash courts with premium wooden flooring for consistent bounce and player safety.',
+    imageSrc: woodenFlooring,
     subcategories: [
       {
-        id: "wooden",
-        name: "Wooden flooring",
+        id: 'wooden',
+        name: 'Wooden flooring',
         description:
-          "Hardwood squash court flooring with proper sealing and line integration.",
-        images: [
-          "https://images.unsplash.com/photo-1519861530983-9a6a9afee40e?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1577416412292-747c6607f055?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Hardwood squash court flooring with proper sealing and line integration.',
+        images: [woodenFlooring, indoorPvc],
       },
     ],
   },
   {
-    id: "artificial-football-turf",
-    title: "Artificial football turf",
+    id: 'artificial-football-turf',
+    title: 'Artificial football turf',
     description:
-      "FIFA-quality artificial football turfs for clubs, schools, and municipal grounds with infill and non-infill options.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
+      'FIFA-quality artificial football turfs for clubs, schools, and municipal grounds with infill and non-infill options.',
+    imageSrc: runningTrack,
     subcategories: [
       {
-        id: "50mm-infill",
-        name: "50mm infill",
+        id: '50mm-infill',
+        name: '50mm infill',
         description:
-          "Long-pile turf with sand and rubber infill for professional match play and training.",
-        images: [
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1529900748604-07564a03e4a9?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Long-pile turf with sand and rubber infill for professional match play and training.',
+        images: [runningTrack, purRunningTrack],
       },
       {
-        id: "30mm-non-infill",
-        name: "30mm non infill",
+        id: '30mm-non-infill',
+        name: '30mm non infill',
         description:
-          "Shorter non-infill turf systems for high-usage community and school pitches.",
-        images: [
-          "https://images.unsplash.com/photo-1529900748604-07564a03e4a9?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Shorter non-infill turf systems for high-usage community and school pitches.',
+        images: [purRunningTrack, runningTrack],
       },
     ],
   },
   {
-    id: "cricket-turf",
-    title: "Cricket turf",
+    id: 'cricket-turf',
+    title: 'Cricket turf',
     description:
-      "Synthetic and hybrid cricket turf solutions for nets, practice wickets, and multi-sport grounds.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=900&auto=format&fit=crop&q=80",
+      'Synthetic and hybrid cricket turf solutions for nets, practice wickets, and multi-sport grounds.',
+    imageSrc: runningTrack,
     subcategories: [
       {
-        id: "multipurpose",
-        name: "Multipurpose sports turf",
+        id: 'multipurpose',
+        name: 'Multipurpose sports turf',
         description:
-          "Versatile turf systems suited for cricket nets, practice pitches, and shared sports use.",
-        images: [
-          "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1759733841123-b8e1d75ee45c?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Versatile turf systems suited for cricket nets, practice pitches, and shared sports use.',
+        images: [runningTrack, sandwichTrack],
       },
     ],
   },
   {
-    id: "hockey-turf",
-    title: "Hockey turf",
+    id: 'hockey-turf',
+    title: 'Hockey turf',
     description:
-      "Water-based and sand-dressed hockey turfs built for FIH standards, fast play, and long-term durability.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
+      'Water-based and sand-dressed hockey turfs built for FIH standards, fast play, and long-term durability.',
+    imageSrc: purRunningTrack,
     subcategories: [
       {
-        id: "synthetic-hockey-turf",
-        name: "Synthetic hockey turf",
+        id: 'synthetic-hockey-turf',
+        name: 'Synthetic hockey turf',
         description:
-          "Professional hockey turf systems with drainage, shock pads, and line marking.",
-        images: [
-          "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1529900748604-07564a03e4a9?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Professional hockey turf systems with drainage, shock pads, and line marking.',
+        images: [purRunningTrack, runningTrack],
       },
     ],
   },
   {
-    id: "gym-flooring",
-    title: "Gym flooring",
+    id: 'gym-flooring',
+    title: 'Gym flooring',
     description:
-      "Heavy-duty gym flooring for free-weight zones, cardio areas, and functional training spaces.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&auto=format&fit=crop&q=80",
+      'Heavy-duty gym flooring for free-weight zones, cardio areas, and functional training spaces.',
+    imageSrc: indoorPvc,
     subcategories: [
       {
-        id: "rubber-tile",
-        name: "Rubber tile flooring",
+        id: 'rubber-tile',
+        name: 'Rubber tile flooring',
         description:
-          "Interlocking rubber tiles for impact absorption under equipment and free weights.",
-        images: [
-          "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Interlocking rubber tiles for impact absorption under equipment and free weights.',
+        images: [indoorPvc, volleyBallPu],
       },
       {
-        id: "epdm-rubber",
-        name: "EPDM rubber flooring",
+        id: 'epdm-rubber',
+        name: 'EPDM rubber flooring',
         description:
-          "Seamless EPDM rubber surfaces for commercial gyms and high-traffic fitness studios.",
-        images: [
-          "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Seamless EPDM rubber surfaces for commercial gyms and high-traffic fitness studios.',
+        images: [volleyBallPu, indoorPvc],
       },
     ],
   },
   {
-    id: "childrens-play-arena",
+    id: 'childrens-play-arena',
     title: "Children's play arena",
     description:
-      "Safe, colorful play surfaces for schools, parks, and residential play areas with fall-height compliance.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&auto=format&fit=crop&q=80",
+      'Safe, colorful play surfaces for schools, parks, and residential play areas with fall-height compliance.',
+    imageSrc: volleyBallSynthetic,
     subcategories: [
       {
-        id: "epdm-rubber",
-        name: "EPDM rubber flooring",
+        id: 'epdm-rubber',
+        name: 'EPDM rubber flooring',
         description:
-          "Soft, durable EPDM surfaces for playgrounds with custom colors and patterns.",
-        images: [
-          "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&auto=format&fit=crop&q=80",
-          "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=900&auto=format&fit=crop&q=80",
-        ],
+          'Soft, durable EPDM surfaces for playgrounds with custom colors and patterns.',
+        images: [volleyBallSynthetic, volleyBallPu],
       },
     ],
   },
