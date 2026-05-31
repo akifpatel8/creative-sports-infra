@@ -3,12 +3,14 @@ import { useLocation } from 'react-router';
 
 import { scrollToPageTop } from '../hooks/useScrollToTop';
 
-/** Scrolls to top on route changes (skips when navigating to #contact). */
+const SCROLL_TARGET_HASHES = new Set(['#contact', '#our-work']);
+
+/** Scrolls to top on route changes (skips when navigating to in-page sections). */
 export function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash === '#contact') return;
+    if (SCROLL_TARGET_HASHES.has(hash)) return;
     scrollToPageTop('auto');
   }, [pathname, hash]);
 

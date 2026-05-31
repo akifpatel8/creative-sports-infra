@@ -28,7 +28,7 @@ export function OurWorkGallery() {
   const [activeItem, setActiveItem] = useState<GalleryItem | null>(null);
 
   return (
-    <section id="our-work" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
+    <section id="our-work" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50 scroll-mt-44">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-14 max-w-3xl mx-auto">
           <p className="text-sm font-semibold uppercase tracking-wide text-blue-600 mb-2">

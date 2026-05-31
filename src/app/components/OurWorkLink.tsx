@@ -3,27 +3,27 @@ import { Link } from 'react-router';
 
 import { useScrollToSection } from '../hooks/useScrollToSection';
 
-type ContactLinkProps = {
+type OurWorkLinkProps = {
   className?: string;
   children: ReactNode;
   'aria-current'?: 'page' | undefined;
   onNavigate?: () => void;
 };
 
-export function ContactLink({
+export function OurWorkLink({
   className,
   children,
   'aria-current': ariaCurrent,
   onNavigate,
-}: ContactLinkProps) {
-  const goToContact = useScrollToSection('contact', 'contact');
+}: OurWorkLinkProps) {
+  const goToOurWork = useScrollToSection('our-work', 'our-work');
 
   return (
     <Link
-      to="/#contact"
+      to="/#our-work"
       className={className}
       onClick={(e) => {
-        goToContact(e);
+        goToOurWork(e);
         onNavigate?.();
       }}
       aria-current={ariaCurrent}
