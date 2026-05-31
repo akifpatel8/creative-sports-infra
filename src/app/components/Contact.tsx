@@ -1,8 +1,10 @@
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
+import { CONTACT_EMAILS, CONTACT_PHONES } from '../contact-info';
+
 export function Contact() {
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section id="contact" className="py-20 px-6 bg-gray-50 scroll-mt-44">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">Get In Touch</h2>
@@ -19,8 +21,11 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="text-xl mb-2">Phone</h3>
-                <p className="text-gray-600">+91 98765 43210</p>
-                <p className="text-gray-600">+91 87654 32109</p>
+                {CONTACT_PHONES.map((p) => (
+                  <p key={p.href} className="text-gray-600">
+                    {p.display}
+                  </p>
+                ))}
               </div>
             </div>
 
@@ -30,8 +35,11 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="text-xl mb-2">Email</h3>
-                <p className="text-gray-600">info@creativesportsinfra.com</p>
-                <p className="text-gray-600">sales@creativesportsinfra.com</p>
+                {CONTACT_EMAILS.map((e) => (
+                  <p key={e.href} className="text-gray-600">
+                    {e.display}
+                  </p>
+                ))}
               </div>
             </div>
 

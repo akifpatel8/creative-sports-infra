@@ -1,3 +1,8 @@
+import { Link } from 'react-router';
+
+import { scrollToPageTop } from '../hooks/useScrollToTop';
+import { ContactLink } from './ContactLink';
+
 export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 px-6">
@@ -13,10 +18,21 @@ export function Footer() {
           <div>
             <h4 className="text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Projects</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li>
+                <Link to="/" onClick={scrollToPageTop} className="hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" onClick={scrollToPageTop} className="hover:text-white transition-colors">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <ContactLink className="hover:text-white transition-colors">
+                  Contact
+                </ContactLink>
+              </li>
             </ul>
           </div>
 

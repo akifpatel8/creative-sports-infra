@@ -1,17 +1,16 @@
-import { Hero } from './components/Hero';
-import { WhatWeDo } from './components/WhatWeDo';
-import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { Route, Routes } from 'react-router';
+
+import { MainLayout } from './layouts/MainLayout';
+import { HomePage } from './pages/HomePage';
+import { ProductsPage } from './pages/ProductsPage';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <WhatWeDo />
-      <Testimonials />
-      <Contact />
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="products" element={<ProductsPage />} />
+      </Route>
+    </Routes>
   );
 }
