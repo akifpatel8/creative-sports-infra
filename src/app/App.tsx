@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router';
+import { Route, Routes } from "react-router";
 
-import { MainLayout } from './layouts/MainLayout';
-import { HomePage } from './pages/HomePage';
-import { ProductsPage } from './pages/ProductsPage';
+import { MainLayout } from "./layouts/MainLayout";
+import { HomePage } from "./pages/HomePage";
+import { ProductsPage } from "./pages/ProductsPage";
 
 export default function App() {
   return (

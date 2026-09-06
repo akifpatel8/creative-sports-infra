@@ -1,10 +1,10 @@
-import { Outlet } from 'react-router';
+import { Outlet } from "react-router";
 
-import { Footer } from '../components/Footer';
-import { ScrollToHash } from '../components/ScrollToHash';
-import { ScrollToTop } from '../components/ScrollToTop';
-import { SiteHeader } from '../components/SiteHeader';
-import { TopContactBanner } from '../components/TopContactBanner';
+import { Footer } from "../components/Footer";
+import { ScrollToHash } from "../components/ScrollToHash";
+import { ScrollToTop } from "../components/ScrollToTop";
+import { SiteHeader } from "../components/SiteHeader";
+import { TopContactBanner } from "../components/TopContactBanner";
 
 export function MainLayout() {
   return (
