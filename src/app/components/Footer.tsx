@@ -102,12 +102,17 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/products?sport=tennis-court" className="hover:text-blue-400 transition-colors">
-                  Padel &amp; Tennis Courts
+                <Link to="/products?sport=padel-court" className="hover:text-blue-400 transition-colors">
+                  Panoramic Padel Tennis
                 </Link>
               </li>
               <li>
-                <Link to="/products?sport=box-cricket" className="hover:text-blue-400 transition-colors">
+                <Link to="/products?sport=tennis-court" className="hover:text-blue-400 transition-colors">
+                  Tennis Courts (ITF Acrylic / PU)
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?sport=cricket-turf" className="hover:text-blue-400 transition-colors">
                   Box Cricket &amp; Football Turf
                 </Link>
               </li>
