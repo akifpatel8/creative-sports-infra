@@ -48,6 +48,15 @@ import imgPadelOutdoorVertical from "../../../Assets/Whatsapp_images/WhatsApp Im
 import imgTennisBlueOutdoorCourt from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-02 at 5.29.16 PM.jpeg";
 import imgBoxCricketFullArena from "../../../Assets/Whatsapp_images/ssdfs.jpeg";
 
+// New specialized assets for Hockey, Squash, Play Arena, and Gym
+import imgHockeyTurfAerial from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.37.29 AM.jpeg";
+import imgHockeyStadiumOlympic from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.37.30 AM.jpeg";
+import imgSquashCourtGlassBack from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.38.07 AM.jpeg";
+import imgChildrenPlayGroundDotted from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.39.11 AM.jpeg";
+import imgChildrenPlayGroundFish from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.39.11 AM (1).jpeg";
+import imgGymInterlockingTiles from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.40.57 AM.jpeg";
+import imgGymWeightliftingPlatform from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.40.57 AM (1).jpeg";
+
 export type ProductSportCategory =
   | "all"
   | "racquet"
@@ -97,7 +106,8 @@ export function getSportById(
   id: string | null | undefined,
 ): SportProduct | undefined {
   if (!id) return undefined;
-  if (id === "box-cricket") return SPORTS_PRODUCTS.find((s) => s.id === "cricket-turf");
+  if (id === "box-cricket")
+    return SPORTS_PRODUCTS.find((s) => s.id === "cricket-turf");
   return SPORTS_PRODUCTS.find((sport) => sport.id === id);
 }
 
@@ -221,7 +231,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgBasketballWoodenStadium, woodenFlooring],
         specs: {
           thickness: "20 mm – 22 mm select Hard Maple",
-          surfaceType: "Select North American Hard Maple on sprung rubber sleepers",
+          surfaceType:
+            "Select North American Hard Maple on sprung rubber sleepers",
           standards: "NBA, FIBA Level 1 & Olympic Games Benchmark",
           features: [
             "Exceptional natural spring and energy return underfoot",
@@ -300,7 +311,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgPadelIndoorPanoramic, imgPadelGlassSideWall],
         specs: {
           thickness: "12 mm Toughened safety glass + 12 mm texturized turf",
-          surfaceType: "Frameless tempered safety glass & monofilament padel turf",
+          surfaceType:
+            "Frameless tempered safety glass & monofilament padel turf",
           standards: "International Padel Federation (FIP) Compliant",
           features: [
             "Unobstructed panoramic rear wall for elite stadium view",
@@ -316,7 +328,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
           "Robust galvanized steel mesh framework with anti-vibration glass fittings built for heavy outdoor winds, sun, and high-frequency club play.",
         images: [imgPadelOutdoorCage, imgPadelOutdoorVertical],
         specs: {
-          thickness: "10 mm – 12 mm safety glass + 2.0 mm structural steel cage",
+          thickness:
+            "10 mm – 12 mm safety glass + 2.0 mm structural steel cage",
           surfaceType: "Electro-welded galvanized anti-injury mesh & turf",
           standards: "FIP 10m x 20m Standard Arena Dimensions",
           features: [
@@ -366,7 +379,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         ],
         specs: {
           thickness: "4.5 mm – 7.0 mm",
-          surfaceType: "High-density multi-layer PVC with non-slip PUR wear coating",
+          surfaceType:
+            "High-density multi-layer PVC with non-slip PUR wear coating",
           standards: "Badminton World Federation (BWF) Certified",
           features: [
             "Calibrated friction coefficient prevents footwear catching or slipping",
@@ -387,7 +401,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         ],
         specs: {
           thickness: "19 mm – 22 mm solid Teak",
-          surfaceType: "Kiln-dried select Indian Teak on sprung rubber sleeper pads",
+          surfaceType:
+            "Kiln-dried select Indian Teak on sprung rubber sleeper pads",
           standards: "BWF & Badminton Association of India (BAI) Approved",
           features: [
             "Natural silica and oil content protects against warping and swelling",
@@ -401,10 +416,15 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         name: "Maple Hardwood Flooring",
         description:
           "Select North American Hard Maple with sports-grade anti-slip polyurethane lacquer for international stadium and university badminton arenas.",
-        images: [imgBadmintonSprungWoodHall, woodenFlooring, mappleWoodenFlooring],
+        images: [
+          imgBadmintonSprungWoodHall,
+          woodenFlooring,
+          mappleWoodenFlooring,
+        ],
         specs: {
           thickness: "20 mm – 22 mm Hard Maple",
-          surfaceType: "Kiln-dried Hard Maple (Acer saccharum) on resilient pads",
+          surfaceType:
+            "Kiln-dried Hard Maple (Acer saccharum) on resilient pads",
           standards: "BWF Level 1 & WSF Multi-Sport Standard",
           features: [
             "Tight uniform grain provides true consistent shuttle response",
@@ -421,7 +441,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgBadmintonOutdoorCourt],
         specs: {
           thickness: "4 – 6 Layer UV Coating",
-          surfaceType: "Silica-fortified all-weather acrylic on concrete/asphalt",
+          surfaceType:
+            "Silica-fortified all-weather acrylic on concrete/asphalt",
           standards: "Recreational BWF Dimensions Standard",
           features: [
             "UV-resistant pigments that will not fade in intense sunlight",
@@ -528,7 +549,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgPickleballCoveredArena, imgPickleballCoveredArena2],
         specs: {
           thickness: "5 – 8 Coat Cushioned System",
-          surfaceType: "Textured acrylic with fine silica grain for paddle ball bite",
+          surfaceType:
+            "Textured acrylic with fine silica grain for paddle ball bite",
           standards: "USA Pickleball Compliant Bounce & Line Specs",
           features: [
             "Specially calibrated friction prevents plastic wiffle ball skidding",
@@ -669,7 +691,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgBoxTurfFieldWide, footballTurfPhoto],
         specs: {
           thickness: "30 mm – 40 mm High-Density Thatch",
-          surfaceType: "Dense curly thatch PE monofilament (no infill required)",
+          surfaceType:
+            "Dense curly thatch PE monofilament (no infill required)",
           standards: "Community & Institutional Heavy-Usage Standard",
           features: [
             "Zero infill splash or rubber migration into shoes and eyes",
@@ -697,7 +720,8 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
         images: [imgBoxCricketFullArena, imgBoxTurfCageField],
         specs: {
           thickness: "15 mm – 25 mm High-Density Grass",
-          surfaceType: "Dense curled PE yarn + peripheral steel cage & nylon net",
+          surfaceType:
+            "Dense curled PE yarn + peripheral steel cage & nylon net",
           standards: "Commercial Pay-and-Play Box Cricket Standard",
           features: [
             "Consistent pitch bounce and seam traction for rubber & tennis balls",
@@ -731,18 +755,19 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
     category: "court",
     badge: "WSF Certified Standard",
     description:
-      "Enclosed squash courts built with World Squash Federation (WSF) compliant sprung Hard Maple timber flooring and impact-tested play walls.",
-    imageSrc: imgBadmintonSprungWoodHall,
+      "Enclosed squash courts built with World Squash Federation (WSF) compliant sprung Hard Maple timber flooring, safety glass back-walls, and impact-tested play walls.",
+    imageSrc: imgSquashCourtGlassBack,
     subcategories: [
       {
         id: "wooden",
         name: "Maplewood Sprung Hardwood Flooring",
         description:
           "North American Hard Maple boards on engineered sprung batten pads, absorbing extreme multi-directional impact and ghost movement loads.",
-        images: [imgBadmintonSprungWoodHall, woodenFlooring, mappleWoodenFlooring],
+        images: [imgSquashCourtGlassBack, woodenFlooring, mappleWoodenFlooring],
         specs: {
           thickness: "20 mm – 22 mm select Hard Maple",
-          surfaceType: "Sprung batten floating substructure + WSF-compliant PU lacquer",
+          surfaceType:
+            "Sprung batten floating substructure + WSF-compliant PU lacquer",
           standards: "World Squash Federation (WSF) & PSA World Tour Standard",
           features: [
             "Janka hardness of 1,450 lbf resists high-frequency squash lunges",
@@ -760,17 +785,18 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
     badge: "FIH Certified Performance",
     description:
       "Water-based and sand-dressed synthetic hockey turfs engineered to International Hockey Federation (FIH) standards for elite stick work and fast ball roll.",
-    imageSrc: imgFootballGrassTurf,
+    imageSrc: imgHockeyTurfAerial,
     subcategories: [
       {
         id: "synthetic-hockey-turf",
         name: "FIH Certified Synthetic Hockey Turf",
         description:
           "Dense non-directional texturized monofilament grass on an elastic shock pad, ensuring true ball roll without deviation or bounce irregularities.",
-        images: [imgFootballGrassTurf, imgBoxTurfFieldWide],
+        images: [imgHockeyTurfAerial, imgHockeyStadiumOlympic],
         specs: {
           thickness: "12 mm – 18 mm pile on 15 mm in-situ shockpad",
-          surfaceType: "Texturized PE monofilament (Wet or Sand-Dressed System)",
+          surfaceType:
+            "Texturized PE monofilament (Wet or Sand-Dressed System)",
           standards: "FIH National & Global Performance Standard",
           features: [
             "Non-directional texturized yarn for 360° true stick handling",
@@ -788,31 +814,14 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
     badge: "Heavy Duty Shock Absorption",
     description:
       "Heavy-duty acoustic rubber tiles and seamless poured EPDM flooring engineered for Olympic weightlifting drops, functional training, and cardio zones.",
-    imageSrc: imgParkJoggingTrack,
+    imageSrc: imgGymWeightliftingPlatform,
     subcategories: [
-      {
-        id: "epdm-rubber",
-        name: "Seamless EPDM Rubber Flooring",
-        description:
-          "Seamless poured-in-place EPDM rubber bound with polyurethane, providing an acoustic, joint-free, and sweat-resistant floor for fitness studios.",
-        images: [imgParkJoggingTrack, purRunningTrack],
-        specs: {
-          thickness: "10 mm – 25 mm Poured In-Situ",
-          surfaceType: "UV-stable virgin EPDM granules bound with flexible PU",
-          standards: "Commercial Fitness & Acoustic Vibration Standard",
-          features: [
-            "100% seamless and joint-free — no lifting edges or dirt traps",
-            "Superior noise dampening and equipment impact absorption",
-            "Non-porous, sweat-resistant, and odor-free formulation",
-          ],
-        },
-      },
       {
         id: "rubber-tile",
         name: "High-Density Rubber Tile Flooring",
         description:
           "Heavy-duty vulcanized rubber tiles designed for free-weight zones, dumbbell racks, and power racks to protect the underlying concrete slab.",
-        images: [indoorPvc, imgParkJoggingTrack],
+        images: [imgGymWeightliftingPlatform],
         specs: {
           thickness: "15 mm – 50 mm Interlocking / Beveled",
           surfaceType: "High-density vulcanized recycled rubber and EPDM top",
@@ -821,6 +830,23 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
             "Absorbs heavy barbell drops without denting or floor cracks",
             "Textured anti-slip diamond/matte surface for sure footing",
             "Interlocking or beveled design for rapid installation and swapping",
+          ],
+        },
+      },
+      {
+        id: "epdm-rubber",
+        name: "Seamless EPDM Rubber Flooring",
+        description:
+          "Seamless poured-in-place EPDM rubber bound with polyurethane, providing an acoustic, joint-free, and sweat-resistant floor for fitness studios.",
+        images: [imgGymInterlockingTiles],
+        specs: {
+          thickness: "10 mm – 25 mm Poured In-Situ",
+          surfaceType: "UV-stable virgin EPDM granules bound with flexible PU",
+          standards: "Commercial Fitness & Acoustic Vibration Standard",
+          features: [
+            "100% seamless and joint-free — no lifting edges or dirt traps",
+            "Superior noise dampening and equipment impact absorption",
+            "Non-porous, sweat-resistant, and odor-free formulation",
           ],
         },
       },
@@ -833,17 +859,18 @@ export const SPORTS_PRODUCTS: SportProduct[] = [
     badge: "EN 1177 Certified Fall Safety",
     description:
       "Vibrant, impact-attenuating seamless EPDM rubber surfaces engineered to protect children from fall injuries in schools, parks, and residential play areas.",
-    imageSrc: imgParkJoggingTrack,
+    imageSrc: imgChildrenPlayGroundDotted,
     subcategories: [
       {
         id: "epdm-rubber",
         name: "EPDM Rubber Safety Flooring",
         description:
           "Dual-layer poured-in-place safety system consisting of an energy-absorbing SBR cushion base topped with a colorful, non-toxic EPDM wear layer.",
-        images: [imgParkJoggingTrack, sandwichTrack],
+        images: [imgChildrenPlayGroundDotted, imgChildrenPlayGroundFish],
         specs: {
           thickness: "25 mm – 100 mm (Critical Fall Height up to 3.0 m)",
-          surfaceType: "Dual Layer: SBR Cushion Base + UV EPDM Wear Top (EN 1177)",
+          surfaceType:
+            "Dual Layer: SBR Cushion Base + UV EPDM Wear Top (EN 1177)",
           standards: "EN 1177 & IS 15567 Certified Fall Height Compliance",
           features: [
             "Certified protection against critical fall injuries up to 3 meters",

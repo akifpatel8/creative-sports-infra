@@ -48,6 +48,15 @@ import imgPadelOutdoorVertical from "../../../Assets/Whatsapp_images/WhatsApp Im
 import imgTennisBlueOutdoorCourt from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-02 at 5.29.16 PM.jpeg";
 import imgBoxCricketFullArena from "../../../Assets/Whatsapp_images/ssdfs.jpeg";
 
+// New specialized assets for Hockey, Squash, Play Arena, and Gym
+import imgHockeyTurfAerial from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.37.29 AM.jpeg";
+import imgHockeyStadiumOlympic from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.37.30 AM.jpeg";
+import imgSquashCourtGlassBack from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.38.07 AM.jpeg";
+import imgChildrenPlayGroundDotted from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.39.11 AM.jpeg";
+import imgChildrenPlayGroundFish from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.39.11 AM (1).jpeg";
+import imgGymInterlockingTiles from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.40.57 AM.jpeg";
+import imgGymWeightliftingPlatform from "../../../Assets/Whatsapp_images/WhatsApp Image 2026-09-07 at 1.40.57 AM (1).jpeg";
+
 export type GalleryCategory =
   | "all"
   | "video"
@@ -571,5 +580,77 @@ export const OUR_WORK_GALLERY: GalleryItem[] = [
     caption:
       "Final touch-ups, net fixture installations, and client walkthrough at site completion.",
     src: sitePhoto3,
+  },
+
+  // --- NEW HOCKEY, SQUASH, PLAY ARENA & GYM SHOWCASE ---
+  {
+    id: "hockey-turf-aerial-blue",
+    type: "image",
+    category: "turf-cricket",
+    tag: "FIH Hockey Turf",
+    title: "FIH Specification Blue Synthetic Hockey Arena",
+    caption:
+      "Aerial view of an international-standard water-based blue synthetic hockey turf with green run-off zones and precision boundary markings.",
+    src: imgHockeyTurfAerial,
+  },
+  {
+    id: "hockey-turf-olympic-stadium",
+    type: "image",
+    category: "turf-cricket",
+    tag: "Championship Stadium",
+    title: "Olympic Specification Hockey Stadium Pitch",
+    caption:
+      "Competition-grade blue hockey pitch with vibrant perimeter surround, player dugouts, and stadium spectator galleries.",
+    src: imgHockeyStadiumOlympic,
+  },
+  {
+    id: "squash-court-glass-back",
+    type: "image",
+    category: "badminton",
+    tag: "Squash Court",
+    title: "WSF Sprung Hardwood Squash Court",
+    caption:
+      "Enclosed competition squash court with select Hard Maple sprung timber flooring, tempered safety glass back-wall, and regulation tin markings.",
+    src: imgSquashCourtGlassBack,
+  },
+  {
+    id: "children-play-arena-dotted",
+    type: "image",
+    category: "running-track",
+    tag: "Children's Play Arena",
+    title: "Seamless EPDM Rubber Safety Play Area",
+    caption:
+      "EN 1177 certified impact-absorbing dual-layer EPDM rubber playground surface with vibrant circular design patterns and slide equipment.",
+    src: imgChildrenPlayGroundDotted,
+  },
+  {
+    id: "children-play-arena-themed",
+    type: "image",
+    category: "running-track",
+    tag: "Playground Surface",
+    title: "Themed Children's Safety Rubber Playground",
+    caption:
+      "Poured-in-place UV-stable EPDM rubber flooring featuring custom character artwork, soft fall cushioning, and multi-activity play zones.",
+    src: imgChildrenPlayGroundFish,
+  },
+  {
+    id: "gym-weightlifting-platforms",
+    type: "image",
+    category: "running-track",
+    tag: "Gym & Fitness Flooring",
+    title: "Olympic Lifting & Heavy Strength Zone",
+    caption:
+      "High-density vulcanized rubber acoustic flooring with integrated hardwood deadlift platforms engineered for barbell drops and vibration reduction.",
+    src: imgGymWeightliftingPlatform,
+  },
+  {
+    id: "gym-interlocking-rubber-tiles",
+    type: "image",
+    category: "running-track",
+    tag: "Commercial Gym",
+    title: "Interlocking Rubber Tile Fitness Flooring",
+    caption:
+      "Heavy-duty interlocking rubber tile flooring beneath commercial cardio and resistance workout equipment.",
+    src: imgGymInterlockingTiles,
   },
 ];
