@@ -16,6 +16,7 @@ import {
   type ProductSportCategory,
   type SportProduct,
 } from "../data/sportsProducts";
+import { CertificationLogos } from "./CertificationLogos";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { SubcategoryCard } from "./SubcategoryCard";
 import { Button } from "./ui/button";
@@ -27,6 +28,72 @@ type SportsProductsCatalogProps = {
   showViewAllLink?: boolean;
   sectionId?: string;
 };
+
+function getCategoryColor(category: SportProduct["category"]) {
+  switch (category) {
+    case "turf":
+      return {
+        cardBg: "bg-gradient-to-b from-emerald-50 via-teal-50/60 to-emerald-100/50",
+        cardBorder: "border-2 border-emerald-300 hover:border-emerald-500",
+        topBorder: "border-t-4 border-t-emerald-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-emerald-900/15",
+        badge: "bg-emerald-600 text-white",
+        categoryTag: "bg-emerald-700 text-white",
+        chip: "bg-emerald-200/90 text-emerald-950 border border-emerald-300/90 font-semibold",
+        highlight: "group-hover:text-emerald-800",
+        actionText: "text-emerald-900 group-hover:text-emerald-700",
+        actionBorder: "border-emerald-300/80",
+        actionArrow: "text-emerald-600 group-hover:text-emerald-800",
+        accent: "bg-emerald-600",
+      };
+    case "court":
+      return {
+        cardBg: "bg-gradient-to-b from-amber-50 via-orange-50/60 to-amber-100/50",
+        cardBorder: "border-2 border-amber-300 hover:border-amber-500",
+        topBorder: "border-t-4 border-t-amber-500",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-amber-900/15",
+        badge: "bg-amber-600 text-white",
+        categoryTag: "bg-amber-700 text-white",
+        chip: "bg-amber-200/90 text-amber-950 border border-amber-300/90 font-semibold",
+        highlight: "group-hover:text-amber-800",
+        actionText: "text-amber-950 group-hover:text-amber-800",
+        actionBorder: "border-amber-300/80",
+        actionArrow: "text-amber-600 group-hover:text-amber-800",
+        accent: "bg-amber-600",
+      };
+    case "track":
+      return {
+        cardBg: "bg-gradient-to-b from-rose-50 via-red-50/60 to-rose-100/50",
+        cardBorder: "border-2 border-rose-300 hover:border-rose-500",
+        topBorder: "border-t-4 border-t-rose-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-rose-900/15",
+        badge: "bg-rose-600 text-white",
+        categoryTag: "bg-rose-700 text-white",
+        chip: "bg-rose-200/90 text-rose-950 border border-rose-300/90 font-semibold",
+        highlight: "group-hover:text-rose-800",
+        actionText: "text-rose-950 group-hover:text-rose-800",
+        actionBorder: "border-rose-300/80",
+        actionArrow: "text-rose-600 group-hover:text-rose-800",
+        accent: "bg-rose-600",
+      };
+    case "racquet":
+    default:
+      return {
+        cardBg: "bg-gradient-to-b from-sky-50 via-blue-50/60 to-indigo-100/50",
+        cardBorder: "border-2 border-sky-300 hover:border-sky-500",
+        topBorder: "border-t-4 border-t-blue-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-blue-900/15",
+        badge: "bg-blue-600 text-white",
+        categoryTag: "bg-blue-700 text-white",
+        chip: "bg-sky-200/90 text-blue-950 border border-sky-300/90 font-semibold",
+        highlight: "group-hover:text-blue-800",
+        actionText: "text-blue-950 group-hover:text-blue-800",
+        actionBorder: "border-sky-300/80",
+        actionArrow: "text-blue-600 group-hover:text-blue-800",
+        accent: "bg-blue-600",
+      };
+  }
+}
 
 export function SportsProductsCatalog({
   selectedSportId,
@@ -55,22 +122,40 @@ export function SportsProductsCatalog({
   };
 
   return (
-    <section id={sectionId} className="py-14 sm:py-20 px-4 sm:px-6 bg-slate-50/50 scroll-mt-20">
+    <section id={sectionId} className="py-14 sm:py-20 px-4 sm:px-6 bg-slate-100/90 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-3">
-            <Sparkles className="size-3.5" />
-            Turnkey Sports Infrastructure
+        {/* Section Header with Premium Stadium Arena Showcase Background */}
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white p-6 sm:p-10 lg:p-12 mb-10 sm:mb-12 shadow-2xl border border-blue-900/50">
+          {/* Decorative court geometry lines */}
+          <div className="absolute inset-0 opacity-15 pointer-events-none">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M0,50 Q50,0 100,50 T200,50" fill="none" stroke="currentColor" strokeWidth="0.8" />
+              <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" strokeWidth="0.8" />
+              <circle cx="50" cy="50" r="3" fill="currentColor" />
+              <line x1="0" y1="50" x2="100" y2="50" stroke="currentColor" strokeWidth="0.8" />
+              <rect x="15" y="20" width="70" height="60" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+            </svg>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-            World-Class Sports &amp; Flooring Solutions
-          </h2>
-          <p className="text-base sm:text-lg text-slate-600">
-            {selectedSport
-              ? `Engineered surface specifications, multi-layer cross-sections, and proof-of-work for ${selectedSport.title.toLowerCase()}.`
-              : "Discover FIFA, BWF, FIBA, IAAF, and ITF certified sports surfaces constructed with precision engineering."}
-          </p>
+
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
+              <Sparkles className="size-3.5 text-amber-400" />
+              <span>Turnkey Sports Infrastructure</span>
+            </div>
+
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+              World-Class Sports &amp; Flooring Solutions
+            </h2>
+
+            <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+              {selectedSport
+                ? `Engineered surface specifications, multi-layer cross-sections, and proof-of-work for ${selectedSport.title.toLowerCase()}.`
+                : "Olympic, federation, and collegiate certified surfaces engineered with precision grading, sub-base leveling, and premium wear resistance."}
+            </p>
+
+            {/* Official Certification Logos (IAAF, BWF, FIFA, FIBA, ITF, NBA, etc.) */}
+            <CertificationLogos theme="dark" />
+          </div>
         </div>
 
         {selectedSport ? (
@@ -81,7 +166,7 @@ export function SportsProductsCatalog({
               <Button
                 type="button"
                 variant="outline"
-                className="text-slate-700 hover:text-blue-600 hover:bg-white border-slate-200 shadow-sm font-medium"
+                className="text-slate-800 hover:text-blue-600 bg-white border-slate-300 shadow-sm font-bold"
                 onClick={handleBackToAll}
               >
                 <ArrowLeft className="size-4 mr-1.5" aria-hidden />
@@ -93,14 +178,14 @@ export function SportsProductsCatalog({
                   href={getWhatsAppInquiryUrl(selectedSport)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 shadow-md shadow-emerald-700/20 transition-all"
                 >
                   <MessageSquare className="size-4" />
                   Inquire on WhatsApp
                 </a>
                 <a
                   href="tel:+919987545934"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold px-4 py-2.5 shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold px-4 py-2.5 shadow-sm transition-all"
                 >
                   <Phone className="size-4 text-blue-600" />
                   Call Engineering Team
@@ -109,18 +194,18 @@ export function SportsProductsCatalog({
             </div>
 
             {/* Sport Overview Hero Banner */}
-            <div className="mb-10 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-900 to-slate-900 text-white p-6 sm:p-8 shadow-md">
+            <div className="mb-10 rounded-2xl border border-blue-900/40 bg-gradient-to-r from-blue-950 via-slate-900 to-slate-950 text-white p-6 sm:p-8 shadow-xl">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="max-w-3xl">
                   <div className="flex items-center gap-2.5 flex-wrap mb-3">
-                    <span className="rounded-md bg-blue-500/30 border border-blue-400/40 px-2.5 py-1 text-xs font-semibold text-blue-200">
+                    <span className="rounded-md bg-amber-500/20 border border-amber-400/40 px-2.5 py-1 text-xs font-bold text-amber-300">
                       {selectedSport.badge}
                     </span>
                     <span className="text-xs text-slate-300 font-medium">
                       {selectedSport.subcategories.length} Specialized Systems Available
                     </span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3">
+                  <h3 className="font-heading text-2xl sm:text-3xl font-black tracking-tight mb-3">
                     {selectedSport.title}
                   </h3>
                   <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -131,12 +216,12 @@ export function SportsProductsCatalog({
             </div>
 
             {/* Subcategories Grid */}
-            <div className="mb-4 flex items-center justify-between">
-              <h4 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <div className="mb-6 flex items-center justify-between">
+              <h4 className="font-heading text-xl font-bold text-slate-900 flex items-center gap-2">
                 <Layers className="size-5 text-blue-600" />
                 Available Flooring &amp; Construction Systems
               </h4>
-              <span className="text-xs text-slate-500">
+              <span className="text-xs text-slate-600 font-medium">
                 Swipe or click arrows to view photos
               </span>
             </div>
@@ -148,17 +233,18 @@ export function SportsProductsCatalog({
                     subcategory={sub}
                     index={index}
                     sportTitle={selectedSport.title}
+                    category={selectedSport.category}
                   />
                 </li>
               ))}
             </ul>
 
-            {/* Consultation Banner */}
-            <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 text-center shadow-sm max-w-4xl mx-auto">
-              <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+            {/* Consultation Banner with Athletic Stadium Theme */}
+            <div className="mt-12 rounded-2xl border border-blue-900/60 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 p-6 sm:p-8 text-center text-white shadow-xl max-w-4xl mx-auto">
+              <h4 className="font-heading text-lg sm:text-xl font-black text-white mb-2">
                 Need Guidance on Sub-Base Requirements or Court Sizing?
               </h4>
-              <p className="text-sm text-slate-600 mb-6 max-w-2xl mx-auto">
+              <p className="text-sm text-slate-300 mb-6 max-w-2xl mx-auto">
                 Our civil and sports infrastructure specialists offer complimentary site inspections, sub-base leveling analysis, and turn-key BOQ estimates across India.
               </p>
               <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -166,12 +252,12 @@ export function SportsProductsCatalog({
                   href={getWhatsAppInquiryUrl(selectedSport)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-5 py-3 shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold px-5 py-3 shadow-md shadow-emerald-700/20 transition-all cursor-pointer"
                 >
                   <MessageSquare className="size-4" />
                   Chat on WhatsApp (+91 9987545934)
                 </a>
-                <Button asChild variant="outline" className="border-slate-300">
+                <Button asChild variant="outline" className="border-slate-700 bg-slate-900/80 hover:bg-slate-800 font-bold text-white">
                   <Link to="/contact">Request Official Site Survey</Link>
                 </Button>
               </div>
@@ -194,19 +280,19 @@ export function SportsProductsCatalog({
                     type="button"
                     onClick={() => setActiveCategory(cat.id)}
                     className={cn(
-                      "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-sm",
+                      "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm cursor-pointer",
                       isActive
-                        ? "bg-blue-600 text-white shadow-blue-500/20 shadow-md ring-2 ring-blue-600 ring-offset-2"
-                        : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 hover:border-slate-300"
+                        ? "bg-slate-950 text-white shadow-md ring-2 ring-blue-600 ring-offset-2"
+                        : "bg-slate-200/90 text-slate-800 border border-slate-300 hover:bg-slate-300/90 hover:border-slate-400"
                     )}
                   >
                     <span>{cat.label}</span>
                     <span
                       className={cn(
-                        "rounded-full px-1.5 py-0.5 text-[10px] font-bold",
+                        "rounded-full px-1.5 py-0.5 text-[10px] font-extrabold",
                         isActive
-                          ? "bg-white/20 text-white"
-                          : "bg-slate-100 text-slate-600"
+                          ? "bg-amber-400 text-slate-950"
+                          : "bg-slate-300/80 text-slate-800"
                       )}
                     >
                       {count}
@@ -216,76 +302,92 @@ export function SportsProductsCatalog({
               })}
             </div>
 
-            {/* Products Grid */}
+            {/* Products Grid with Distinct Category Background Colors */}
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 list-none p-0 m-0">
-              {filteredProducts.map((sport) => (
-                <li key={sport.id}>
-                  <button
-                    type="button"
-                    onClick={() => onSelectSport(sport.id)}
-                    className={cn(
-                      "w-full h-full text-left flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm",
-                      "overflow-hidden transition-all duration-200 hover:shadow-xl hover:border-blue-400 group",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-                    )}
-                  >
-                    {/* Media Thumbnail Container */}
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                      <ImageWithFallback
-                        src={sport.imageSrc}
-                        alt={sport.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+              {filteredProducts.map((sport) => {
+                const colorScheme = getCategoryColor(sport.category);
 
-                      {/* Certification Pill Top Left */}
-                      <span className="absolute top-3 left-3 rounded-md bg-blue-600/90 backdrop-blur-md px-2.5 py-1 text-[11px] font-semibold text-white shadow-md flex items-center gap-1.5">
-                        <ShieldCheck className="size-3" />
-                        {sport.badge}
-                      </span>
+                return (
+                  <li key={sport.id}>
+                    <button
+                      type="button"
+                      onClick={() => onSelectSport(sport.id)}
+                      className={cn(
+                        "w-full h-full text-left flex flex-col rounded-2xl",
+                        colorScheme.cardBg,
+                        colorScheme.cardBorder,
+                        colorScheme.cardShadow,
+                        colorScheme.topBorder,
+                        "overflow-hidden transition-all duration-300 hover:-translate-y-1 group cursor-pointer",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                      )}
+                    >
+                      {/* Media Thumbnail Container */}
+                      <div className="relative aspect-[4/3] overflow-hidden bg-slate-900">
+                        <ImageWithFallback
+                          src={sport.imageSrc}
+                          alt={sport.title}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        {/* Subtle dark gradient overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
-                      {/* Subcategories count badge Bottom Right */}
-                      <span className="absolute bottom-3 right-3 rounded-full bg-slate-900/80 backdrop-blur-sm px-2.5 py-1 text-[11px] font-semibold text-white shadow-sm">
-                        {sport.subcategories.length} systems
-                      </span>
-                    </div>
+                        {/* Certification Badge Top Left */}
+                        <span className="absolute top-3 left-3 rounded-md bg-slate-950/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-amber-300 border border-amber-400/30 shadow-md flex items-center gap-1.5">
+                          <ShieldCheck className="size-3 text-amber-400" />
+                          {sport.badge}
+                        </span>
 
-                    {/* Card Body */}
-                    <div className="flex flex-col flex-1 p-5 sm:p-6">
-                      <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        {sport.title}
-                      </h3>
-                      <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-2">
-                        {sport.description}
-                      </p>
-
-                      {/* Subcategory System Chips Preview */}
-                      <div className="mt-auto mb-4 flex flex-wrap gap-1.5">
-                        {sport.subcategories.slice(0, 3).map((sub) => (
-                          <span
-                            key={sub.id}
-                            className="inline-block rounded-md bg-slate-100 text-slate-700 text-[11px] px-2 py-0.5 font-medium border border-slate-200/60"
-                          >
-                            {sub.name.replace(" System", "").replace(" Flooring", "")}
-                          </span>
-                        ))}
-                        {sport.subcategories.length > 3 && (
-                          <span className="inline-block rounded-md bg-blue-50 text-blue-700 text-[11px] px-2 py-0.5 font-semibold">
-                            +{sport.subcategories.length - 3} more
-                          </span>
-                        )}
+                        {/* Subcategories count badge Bottom Right */}
+                        <span className="absolute bottom-3 right-3 rounded-full bg-slate-950/85 backdrop-blur-sm px-2.5 py-1 text-[11px] font-bold text-white shadow-sm">
+                          {sport.subcategories.length} systems
+                        </span>
                       </div>
 
-                      {/* Action Link */}
-                      <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600 group-hover:text-blue-700">
-                        <span>Explore Technical Specs</span>
-                        <ChevronRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                      {/* Card Body with Vibrant Colored Background & High Contrast */}
+                      <div className="flex flex-col flex-1 p-5 sm:p-6 bg-transparent">
+                        <div className="flex items-center justify-between gap-2 mb-2">
+                          <h3 className={cn("font-heading text-xl font-black text-slate-950 transition-colors", colorScheme.highlight)}>
+                            {sport.title}
+                          </h3>
+                          <span className={cn("text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full tracking-wider shrink-0 shadow-xs", colorScheme.categoryTag)}>
+                            {sport.category}
+                          </span>
+                        </div>
+                        <p className="text-slate-700 text-sm mb-4 leading-relaxed line-clamp-2 font-medium">
+                          {sport.description}
+                        </p>
+
+                        {/* Subcategory System Chips Preview */}
+                        <div className="mt-auto mb-4 flex flex-wrap gap-1.5">
+                          {sport.subcategories.slice(0, 3).map((sub) => (
+                            <span
+                              key={sub.id}
+                              className={cn(
+                                "inline-block rounded-md text-[11px] px-2 py-0.5 font-bold shadow-xs",
+                                colorScheme.chip
+                              )}
+                            >
+                              {sub.name.replace(" System", "").replace(" Flooring", "")}
+                            </span>
+                          ))}
+                          {sport.subcategories.length > 3 && (
+                            <span className="inline-block rounded-md bg-slate-900/10 text-slate-800 text-[11px] px-2 py-0.5 font-extrabold">
+                              +{sport.subcategories.length - 3} more
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Action Link with Category Accent */}
+                        <div className={cn("pt-3 border-t flex items-center justify-between text-xs font-black transition-colors", colorScheme.actionBorder, colorScheme.actionText)}>
+                          <span className="uppercase tracking-wider">Explore Systems</span>
+                          <ChevronRight className={cn("size-4 transition-transform group-hover:translate-x-1", colorScheme.actionArrow)} aria-hidden />
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                </li>
-              ))}
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
@@ -293,10 +395,10 @@ export function SportsProductsCatalog({
         {/* View All Products CTA on Homepage */}
         {showViewAllLink && !selectedSport && (
           <div className="mt-12 sm:mt-16 text-center">
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 px-8 py-6 rounded-xl text-base shadow-lg shadow-blue-500/20">
+            <Button asChild size="lg" className="bg-slate-950 hover:bg-slate-900 text-white font-bold px-8 py-6 rounded-xl text-base shadow-xl cursor-pointer">
               <Link to="/products">
                 Explore Full Technical Specifications
-                <ChevronRight className="size-5 ml-1" aria-hidden />
+                <ChevronRight className="size-5 ml-1 text-amber-400" aria-hidden />
               </Link>
             </Button>
           </div>

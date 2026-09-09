@@ -1,5 +1,5 @@
 import { CheckCircle2, MessageSquare, Layers, ShieldCheck, Ruler } from "lucide-react";
-import type { SportSubcategory } from "../data/sportsProducts";
+import type { SportProduct, SportSubcategory } from "../data/sportsProducts";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import {
   Carousel,
@@ -8,16 +8,61 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import { cn } from "./ui/utils";
 
 type SubcategoryCardProps = {
   subcategory: SportSubcategory;
   index: number;
   sportTitle?: string;
+  category?: SportProduct["category"];
 };
 
-export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryCardProps) {
+function getSubcategoryColor(category?: SportProduct["category"]) {
+  switch (category) {
+    case "turf":
+      return {
+        cardBg: "bg-gradient-to-b from-emerald-50 via-teal-50/60 to-emerald-100/50",
+        cardBorder: "border-2 border-emerald-300 hover:border-emerald-500",
+        topBorder: "border-t-4 border-t-emerald-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-emerald-900/15",
+        featuresCheck: "text-emerald-700",
+        divider: "border-emerald-200/90",
+      };
+    case "court":
+      return {
+        cardBg: "bg-gradient-to-b from-amber-50 via-orange-50/60 to-amber-100/50",
+        cardBorder: "border-2 border-amber-300 hover:border-amber-500",
+        topBorder: "border-t-4 border-t-amber-500",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-amber-900/15",
+        featuresCheck: "text-amber-700",
+        divider: "border-amber-200/90",
+      };
+    case "track":
+      return {
+        cardBg: "bg-gradient-to-b from-rose-50 via-red-50/60 to-rose-100/50",
+        cardBorder: "border-2 border-rose-300 hover:border-rose-500",
+        topBorder: "border-t-4 border-t-rose-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-rose-900/15",
+        featuresCheck: "text-rose-700",
+        divider: "border-rose-200/90",
+      };
+    case "racquet":
+    default:
+      return {
+        cardBg: "bg-gradient-to-b from-sky-50 via-blue-50/60 to-indigo-100/50",
+        cardBorder: "border-2 border-sky-300 hover:border-sky-500",
+        topBorder: "border-t-4 border-t-blue-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-blue-900/15",
+        featuresCheck: "text-blue-700",
+        divider: "border-sky-200/90",
+      };
+  }
+}
+
+export function SubcategoryCard({ subcategory, index, sportTitle, category }: SubcategoryCardProps) {
   const { name, description, images, specs } = subcategory;
   const hasMultipleImages = images.length > 1;
+  const color = getSubcategoryColor(category);
 
   const inquiryText = encodeURIComponent(
     `Hello Creative Sports Infra, I am interested in getting a quote/site inspection for: ${sportTitle ? `${sportTitle} - ` : ""}${name}.`
@@ -25,9 +70,17 @@ export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryC
   const whatsappUrl = `https://wa.me/919987545934?text=${inquiryText}`;
 
   return (
-    <article className="flex flex-col h-full rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all overflow-hidden">
+    <article
+      className={cn(
+        "flex flex-col h-full rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-1",
+        color.cardBg,
+        color.cardBorder,
+        color.topBorder,
+        color.cardShadow
+      )}
+    >
       {/* Image Carousel / Media */}
-      <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
+      <div className="relative aspect-[4/3] bg-slate-950 overflow-hidden">
         {hasMultipleImages ? (
           <Carousel className="h-full w-full">
             <CarouselContent className="h-full ml-0">
@@ -39,33 +92,33 @@ export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryC
                   <ImageWithFallback
                     src={src}
                     alt={`${name} — image ${imageIndex + 1}`}
-                    className="h-full w-full object-cover aspect-[4/3]"
+                    className="h-full w-full object-cover aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
                   />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 top-1/2 -translate-y-1/2 border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white size-8" />
-            <CarouselNext className="right-2 top-1/2 -translate-y-1/2 border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white size-8" />
+            <CarouselPrevious className="left-2 top-1/2 -translate-y-1/2 border-0 bg-slate-950/80 text-white shadow-md hover:bg-slate-900 size-8" />
+            <CarouselNext className="right-2 top-1/2 -translate-y-1/2 border-0 bg-slate-950/80 text-white shadow-md hover:bg-slate-900 size-8" />
           </Carousel>
         ) : (
           <ImageWithFallback
             src={images[0]}
             alt={name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         )}
 
         {/* Counter Badge */}
         {hasMultipleImages && (
-          <span className="absolute bottom-2 right-2 rounded-full bg-black/70 backdrop-blur-sm px-2.5 py-0.5 text-xs font-medium text-white shadow-sm">
+          <span className="absolute bottom-2 right-2 rounded-full bg-slate-950/85 backdrop-blur-sm px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
             {images.length} photos
           </span>
         )}
 
         {/* Standards Badge */}
         {specs?.standards && (
-          <span className="absolute top-2 left-2 rounded-lg bg-blue-600/90 backdrop-blur-sm px-2.5 py-1 text-xs font-semibold text-white shadow-sm flex items-center gap-1">
-            <ShieldCheck className="size-3.5" />
+          <span className="absolute top-2 left-2 rounded-lg bg-slate-950/85 backdrop-blur-sm border border-amber-400/40 px-2.5 py-1 text-xs font-bold text-amber-300 shadow-md flex items-center gap-1.5">
+            <ShieldCheck className="size-3.5 text-amber-400" />
             {specs.standards}
           </span>
         )}
@@ -73,31 +126,31 @@ export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryC
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-5 sm:p-6">
-        <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-snug">
+        <h4 className="font-heading text-lg sm:text-xl font-black text-slate-900 mb-2 leading-snug">
           {name}
         </h4>
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm text-slate-600 leading-relaxed mb-4">
           {description}
         </p>
 
-        {/* Technical Specs Pills */}
+        {/* Technical Specs Box with High Contrast Dark Theme */}
         {specs && (
-          <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-100 mb-4 space-y-2 text-xs">
+          <div className="bg-slate-900 rounded-xl p-3.5 border border-slate-800 text-white mb-4 space-y-2 text-xs shadow-inner">
             {specs.thickness && (
-              <div className="flex items-start gap-2 text-slate-700">
-                <Ruler className="size-3.5 text-blue-600 mt-0.5 shrink-0" />
+              <div className="flex items-start gap-2">
+                <Ruler className="size-3.5 text-amber-400 mt-0.5 shrink-0" />
                 <span>
-                  <strong className="text-slate-900 font-semibold">Thickness:</strong>{" "}
-                  {specs.thickness}
+                  <strong className="text-slate-300 font-semibold">Thickness:</strong>{" "}
+                  <span className="text-white font-medium">{specs.thickness}</span>
                 </span>
               </div>
             )}
             {specs.surfaceType && (
-              <div className="flex items-start gap-2 text-slate-700">
-                <Layers className="size-3.5 text-blue-600 mt-0.5 shrink-0" />
+              <div className="flex items-start gap-2">
+                <Layers className="size-3.5 text-sky-400 mt-0.5 shrink-0" />
                 <span>
-                  <strong className="text-slate-900 font-semibold">Surface:</strong>{" "}
-                  {specs.surfaceType}
+                  <strong className="text-slate-300 font-semibold">Surface:</strong>{" "}
+                  <span className="text-white font-medium">{specs.surfaceType}</span>
                 </span>
               </div>
             )}
@@ -110,9 +163,9 @@ export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryC
             {specs.features.map((feature, fIndex) => (
               <li
                 key={fIndex}
-                className="flex items-start gap-2 text-xs text-slate-600"
+                className="flex items-start gap-2 text-xs text-slate-800 font-medium"
               >
-                <CheckCircle2 className="size-3.5 text-emerald-600 mt-0.5 shrink-0" />
+                <CheckCircle2 className={cn("size-3.5 mt-0.5 shrink-0", color.featuresCheck)} />
                 <span>{feature}</span>
               </li>
             ))}
@@ -120,14 +173,14 @@ export function SubcategoryCard({ subcategory, index, sportTitle }: SubcategoryC
         )}
 
         {/* WhatsApp Inquiry Action */}
-        <div className="mt-auto pt-2 border-t border-gray-100">
+        <div className={cn("mt-auto pt-3 border-t", color.divider)}>
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-semibold py-2.5 px-3 transition-colors"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-3 shadow-md shadow-emerald-700/20 transition-all cursor-pointer"
           >
-            <MessageSquare className="size-3.5 text-emerald-600" />
+            <MessageSquare className="size-3.5 fill-current" />
             Inquire About This Surface
           </a>
         </div>

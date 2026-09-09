@@ -18,7 +18,7 @@ export function ProductCard({ product, onContactClick }: ProductCardProps) {
   const { title, description, imageSrc, pricePerSqFt } = product;
 
   return (
-    <Card className="overflow-hidden pt-0 gap-0 flex flex-col h-full border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+    <Card className="overflow-hidden pt-0 gap-0 flex flex-col h-full rounded-2xl border-2 border-blue-200/90 bg-gradient-to-b from-blue-50 via-slate-50 to-indigo-50/60 shadow-md hover:shadow-xl transition-all">
       <div className="aspect-[4/3] w-full overflow-hidden bg-gray-100">
         <ImageWithFallback
           src={imageSrc}

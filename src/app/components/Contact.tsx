@@ -14,16 +14,17 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-gray-50 via-white to-gray-50 scroll-mt-36">
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 bg-slate-100/90 border-t border-slate-200 scroll-mt-36">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 mb-2">
-            Get in Touch
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 border border-blue-300 text-blue-900 text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <Mail className="size-3.5 text-blue-600" />
+            <span>Consultation &amp; Estimates</span>
+          </div>
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
             Build Your Sports Facility With Us
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Ready to plan a championship arena, community sports club, or private court?
             Contact our engineering team for site visits, technical consultation, and estimates.
           </p>
