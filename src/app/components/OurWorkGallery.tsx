@@ -182,7 +182,7 @@ export function OurWorkGallery() {
                 className={cn(
                   "shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer",
                   isActive
-                    ? "bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-lg shadow-amber-500/20 ring-2 ring-amber-400"
+                    ? "bg-gradient-to-r from-[#E35336] to-[#C83C21] text-slate-950 shadow-lg shadow-amber-500/20 ring-2 ring-[#EA7058]"
                     : "bg-slate-900/90 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800 shadow-xs"
                 )}
               >
@@ -213,7 +213,7 @@ export function OurWorkGallery() {
               <button
                 type="button"
                 onClick={() => setActiveItem(item)}
-                className="group relative h-full w-full overflow-hidden rounded-2xl bg-slate-950 shadow-md ring-1 ring-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:ring-amber-400/70"
+                className="group relative h-full w-full overflow-hidden rounded-2xl bg-slate-950 shadow-md ring-1 ring-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:ring-[#E35336] "
               >
                 <ImageWithFallback
                   src={isVideoItem(item) ? item.poster : item.src}
@@ -224,7 +224,7 @@ export function OurWorkGallery() {
 
                 {/* Top Badge: Tag & Duration */}
                 <div className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3 flex items-center gap-1.5 flex-wrap max-w-[85%] z-10">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-slate-950/80 backdrop-blur-md text-amber-300 border border-amber-400/30 shadow-xs">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-slate-950/80 backdrop-blur-md text-[#E35336] border border-amber-400/30 shadow-xs">
                     {item.tag}
                   </span>
                   {isVideoItem(item) && item.duration && (

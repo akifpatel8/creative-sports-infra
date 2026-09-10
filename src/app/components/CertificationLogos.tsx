@@ -235,7 +235,7 @@ export function CertificationLogos({ className, theme = "dark" }: CertificationL
         <p
           className={cn(
             "text-xs sm:text-sm font-bold tracking-widest uppercase",
-            isDark ? "text-amber-400" : "text-blue-700"
+            isDark ? "text-[#E35336]" : "text-blue-700"
           )}
         >
           Official Federation Standards &amp; Certified Flooring

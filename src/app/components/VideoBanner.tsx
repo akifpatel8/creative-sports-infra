@@ -37,7 +37,7 @@ export function VideoBanner() {
           </div>
 
           {/* Main Hero Headline */}
-          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] drop-shadow-md">
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black  tracking-tight leading-[1.12] drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300">
             World-Class Arenas, <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300">
               Courts &amp; Tracks
@@ -71,7 +71,7 @@ export function VideoBanner() {
             <Button
               asChild
               size="lg"
-              className="bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-xl shadow-blue-600/40 px-6 py-6 text-sm sm:text-base cursor-pointer transition-all"
+              className="bg-[#E35336] hover:bg-[#C83C21] text-black font-bold rounded-xl shadow-xl shadow-blue-600/40 px-6 py-6 text-sm sm:text-base cursor-pointer transition-all"
             >
               <a href="#our-work" onClick={goToOurWork}>
                 <Play className="size-4 mr-2 fill-current" />

@@ -48,18 +48,18 @@ function getCategoryColor(category: SportProduct["category"]) {
       };
     case "court":
       return {
-        cardBg: "bg-gradient-to-b from-amber-50 via-orange-50/60 to-amber-100/50",
-        cardBorder: "border-2 border-amber-300 hover:border-amber-500",
-        topBorder: "border-t-4 border-t-amber-500",
-        cardShadow: "shadow-md hover:shadow-xl hover:shadow-amber-900/15",
-        badge: "bg-amber-600 text-white",
-        categoryTag: "bg-amber-700 text-white",
-        chip: "bg-amber-200/90 text-amber-950 border border-amber-300/90 font-semibold",
-        highlight: "group-hover:text-amber-800",
-        actionText: "text-amber-950 group-hover:text-amber-800",
-        actionBorder: "border-amber-300/80",
-        actionArrow: "text-amber-600 group-hover:text-amber-800",
-        accent: "bg-amber-600",
+        cardBg: "bg-gradient-to-b from-emerald-50 via-teal-50/60 to-emerald-100/50",
+        cardBorder: "border-2 border-emerald-300 hover:border-emerald-500",
+        topBorder: "border-t-4 border-t-emerald-600",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-emerald-900/15",
+        badge: "bg-emerald-600 text-white",
+        categoryTag: "bg-emerald-700 text-white",
+        chip: "bg-emerald-200/90 text-emerald-950 border border-emerald-300/90 font-semibold",
+        highlight: "group-hover:text-emerald-800",
+        actionText: "text-emerald-900 group-hover:text-emerald-700",
+        actionBorder: "border-emerald-300/80",
+        actionArrow: "text-emerald-600 group-hover:text-emerald-800",
+        accent: "bg-emerald-600",
       };
     case "track":
       return {
@@ -282,7 +282,7 @@ export function SportsProductsCatalog({
                     className={cn(
                       "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm cursor-pointer",
                       isActive
-                        ? "bg-slate-950 text-white shadow-md ring-2 ring-blue-600 ring-offset-2"
+                        ? "bg-slate-950 text-white shadow-md ring-2 ring-[#E35336] ring-offset-2"
                         : "bg-slate-200/90 text-slate-800 border border-slate-300 hover:bg-slate-300/90 hover:border-slate-400"
                     )}
                   >
@@ -291,7 +291,7 @@ export function SportsProductsCatalog({
                       className={cn(
                         "rounded-full px-1.5 py-0.5 text-[10px] font-extrabold",
                         isActive
-                          ? "bg-amber-400 text-slate-950"
+                          ? "bg-[#E35336]  text-slate-950"
                           : "bg-slate-300/80 text-slate-800"
                       )}
                     >
@@ -333,7 +333,7 @@ export function SportsProductsCatalog({
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
                         {/* Certification Badge Top Left */}
-                        <span className="absolute top-3 left-3 rounded-md bg-slate-950/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-amber-300 border border-amber-400/30 shadow-md flex items-center gap-1.5">
+                        <span className="absolute top-3 left-3 rounded-md bg-slate-950/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-[#E35336] border border-amber-400/30 shadow-md flex items-center gap-1.5">
                           <ShieldCheck className="size-3 text-amber-400" />
                           {sport.badge}
                         </span>
