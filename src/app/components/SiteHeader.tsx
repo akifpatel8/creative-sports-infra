@@ -35,7 +35,7 @@ function navItemClass(isActive: boolean, mobile = false) {
       ? "w-full justify-start rounded-xl px-4 py-3 text-base gap-3"
       : "justify-center rounded-xl px-3.5 py-2 lg:px-4 lg:py-2 text-sm lg:text-[15px]",
     isActive
-      ? "bg-[#E35336] text-black shadow-md shadow-blue-600/40 font-extrabold"
+      ? "bg-[#AF2324] text-black shadow-md shadow-blue-600/40 font-extrabold"
       : mobile
         ? "text-slate-200 bg-slate-800/60 hover:bg-blue-600/30 hover:text-white"
         : "text-slate-200 hover:bg-white/10 hover:text-white",
@@ -75,7 +75,7 @@ function NavLinks({
         aria-current={isHomeActive ? "page" : undefined}
         className={navItemClass(isHomeActive, mobile)}
       >
-        {mobile && <Home className="size-5 text-[#E35336]" />}
+        {mobile && <Home className="size-5 text-[#AF2324]" />}
         Home
       </Link>
       <NavLink
@@ -134,7 +134,7 @@ function BrandLink({ compact = false }: { compact?: boolean }) {
         >
           Creative Sports Infra
         </span>
-        <span className="font-brand-tagline text-[10px] sm:text-xs font-bold text-[#E35336] tracking-wider uppercase drop-shadow-xs">
+        <span className="font-brand-tagline text-[10px] sm:text-xs font-bold text-[#AF2324] tracking-wider uppercase drop-shadow-xs">
           Building Better Playing Environments
         </span>
       </div>
@@ -169,7 +169,7 @@ export function SiteHeader() {
             <Button
               asChild
               size="sm"
-              className="bg-gradient-to-r from-[#E35336] to-[#E35336] hover:from-[#C83C21] hover:to-[#C83C21] text-black rounded-xl h-9 px-3 text-xs font-bold shadow-md shadow-blue-900/30"
+              className="bg-gradient-to-r from-[#AF2324] to-[#AF2324] hover:from-[#921D1E] hover:to-[#921D1E] text-black rounded-xl h-9 px-3 text-xs font-bold shadow-md shadow-blue-900/30"
             >
               <a href={PRIMARY_PHONE.href}>
                 <Phone className="size-3.5 mr-1" aria-hidden />
@@ -198,7 +198,7 @@ export function SiteHeader() {
                     <SheetTitle className="font-brand-title text-lg font-black text-white uppercase tracking-wide">
                       Creative Sports Infra
                     </SheetTitle>
-                    <p className="font-brand-tagline text-xs text-[#E35336] font-bold uppercase tracking-wider mt-0.5">
+                    <p className="font-brand-tagline text-xs text-[#AF2324] font-bold uppercase tracking-wider mt-0.5">
                       Building Better Playing Environments
                     </p>
                   </SheetHeader>
@@ -213,7 +213,7 @@ export function SiteHeader() {
 
                 {/* Mobile Drawer Quick Connect */}
                 <div className="p-4 border-t border-slate-800 bg-slate-900/70 space-y-3">
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-wider">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#AF2324] uppercase tracking-wider">
                     <Trophy className="size-3.5" />
                     <span>Quick Consultation</span>
                   </div>
@@ -267,7 +267,7 @@ export function SiteHeader() {
             <Button
               asChild
               size="sm"
-              className="bg-gradient-to-r from-[#E35336] to-[#E35336] hover:from-[#E35336] hover:to-[#E35336] text-slate-950 font-black rounded-xl px-4 shadow-lg shadow-amber-500/20 cursor-pointer transition-all"
+              className="bg-gradient-to-r from-[#AF2324] to-[#AF2324] hover:from-[#AF2324] hover:to-[#AF2324] text-slate-950 font-black rounded-xl px-4 shadow-lg shadow-[#AF2324]/20 cursor-pointer transition-all"
             >
               <a href={PRIMARY_PHONE.href} className="inline-flex items-center gap-1.5">
                 <Phone className="size-3.5" />

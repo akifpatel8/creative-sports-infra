@@ -30,12 +30,12 @@ function getSubcategoryColor(category?: SportProduct["category"]) {
       };
     case "court":
       return {
-        cardBg: "bg-gradient-to-b from-amber-50 via-orange-50/60 to-amber-100/50",
-        cardBorder: "border-2 border-amber-300 hover:border-amber-500",
-        topBorder: "border-t-4 border-t-amber-500",
-        cardShadow: "shadow-md hover:shadow-xl hover:shadow-amber-900/15",
-        featuresCheck: "text-amber-700",
-        divider: "border-amber-200/90",
+        cardBg: "bg-gradient-to-b from-[#FCF4F4] via-[#FCF4F4]/60 to-[#F8E9E9]/50",
+        cardBorder: "border-2 border-[#AF2324] hover:border-[#AF2324]",
+        topBorder: "border-t-4 border-t-[#AF2324]",
+        cardShadow: "shadow-md hover:shadow-xl hover:shadow-[#AF2324]/15",
+        featuresCheck: "text-[#AF2324]",
+        divider: "border-[#AF2324]/90",
       };
     case "track":
       return {
@@ -117,8 +117,8 @@ export function SubcategoryCard({ subcategory, index, sportTitle, category }: Su
 
         {/* Standards Badge */}
         {specs?.standards && (
-          <span className="absolute top-2 left-2 rounded-lg bg-slate-950/85 backdrop-blur-sm border border-amber-400/40 px-2.5 py-1 text-xs font-bold text-amber-300 shadow-md flex items-center gap-1.5">
-            <ShieldCheck className="size-3.5 text-amber-400" />
+          <span className="absolute top-2 left-2 rounded-lg bg-slate-950/85 backdrop-blur-sm border border-[#AF2324] text-[#AF2324] px-2.5 py-1 text-xs font-bold shadow-md flex items-center gap-1.5">
+            <ShieldCheck className="size-3.5 text-[#AF2324]" />
             {specs.standards}
           </span>
         )}
@@ -138,7 +138,7 @@ export function SubcategoryCard({ subcategory, index, sportTitle, category }: Su
           <div className="bg-slate-900 rounded-xl p-3.5 border border-slate-800 text-white mb-4 space-y-2 text-xs shadow-inner">
             {specs.thickness && (
               <div className="flex items-start gap-2">
-                <Ruler className="size-3.5 text-amber-400 mt-0.5 shrink-0" />
+                <Ruler className="size-3.5 text-[#AF2324] mt-0.5 shrink-0" />
                 <span>
                   <strong className="text-slate-300 font-semibold">Thickness:</strong>{" "}
                   <span className="text-white font-medium">{specs.thickness}</span>

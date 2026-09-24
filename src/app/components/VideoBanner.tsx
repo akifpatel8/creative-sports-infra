@@ -32,14 +32,14 @@ export function VideoBanner() {
         <div className="max-w-3xl space-y-5 sm:space-y-6 text-left">
           {/* Top Category Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/40 border border-blue-400/50 backdrop-blur-md text-blue-200 text-xs font-bold tracking-wide shadow-md">
-            <Trophy className="size-3.5 text-amber-400" />
+            <Trophy className="size-3.5 text-[#AF2324]" />
             <span className="font-brand-tagline uppercase tracking-wider">Turnkey Sports Infrastructure Specialist</span>
           </div>
 
           {/* Main Hero Headline */}
-          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black  tracking-tight leading-[1.12] drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300">
+          <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black  tracking-tight leading-[1.12] drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-[#AF2324]">
             World-Class Arenas, <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amber-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-[#AF2324]">
               Courts &amp; Tracks
             </span>
           </h1>
@@ -57,7 +57,7 @@ export function VideoBanner() {
               BWF, FIBA &amp; IAAF Compliant
             </span>
             <span className="inline-flex items-center gap-1.5 font-semibold bg-slate-900/60 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-slate-700/60">
-              <Trophy className="size-4 text-amber-400" />
+              <Trophy className="size-4 text-[#AF2324]" />
               All India Railway Stadium Builder
             </span>
             <span className="inline-flex items-center gap-1.5 font-semibold bg-slate-900/60 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-slate-700/60">
@@ -71,7 +71,7 @@ export function VideoBanner() {
             <Button
               asChild
               size="lg"
-              className="bg-[#E35336] hover:bg-[#C83C21] text-black font-bold rounded-xl shadow-xl shadow-blue-600/40 px-6 py-6 text-sm sm:text-base cursor-pointer transition-all"
+              className="bg-[#AF2324] hover:bg-[#921D1E] text-black font-bold rounded-xl shadow-xl shadow-blue-600/40 px-6 py-6 text-sm sm:text-base cursor-pointer transition-all"
             >
               <a href="#our-work" onClick={goToOurWork}>
                 <Play className="size-4 mr-2 fill-current" />

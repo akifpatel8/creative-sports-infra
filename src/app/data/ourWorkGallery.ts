@@ -146,16 +146,14 @@ export const OUR_WORK_GALLERY: GalleryItem[] = [
     duration: "0:08",
   },
   {
-    id: "video-track-showcase",
-    type: "video",
+    id: "track-showcase",
+    type: "image",
     category: "running-track",
-    tag: "Athletic Video",
+    tag: "Athletic Running Track",
     title: "Athletic Running Track Showcase",
     caption:
-      "Full PUR synthetic track systems in action with IAAF standard shock absorption and all-weather resilience.",
-    poster: runningTrack,
-    videoSrc: "https://www.youtube.com/embed/Yy2ikI0lmPw?controls=1&rel=0",
-    duration: "YouTube",
+      "Synthetic athletic running track with marked lanes and an all-weather surface for training and competition.",
+    src: runningTrack,
     featured: true,
   },
 

@@ -113,8 +113,8 @@ export function OurWorkGallery() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title Header */}
         <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
-            <Trophy className="size-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#AF2324]/15 border border-[#AF2324]/30 text-[#AF2324] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <Trophy className="size-3.5 text-[#AF2324]" />
             <span>Proof of Work &amp; Project Portfolio</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
@@ -147,7 +147,7 @@ export function OurWorkGallery() {
             </div>
           </div>
           <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-md">
-            <div className="p-2 rounded-lg bg-amber-500/20 text-amber-400 shrink-0">
+            <div className="p-2 rounded-lg bg-[#AF2324]/20 text-[#AF2324] shrink-0">
               <Layers className="size-5" />
             </div>
             <div>
@@ -182,7 +182,7 @@ export function OurWorkGallery() {
                 className={cn(
                   "shrink-0 inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer",
                   isActive
-                    ? "bg-gradient-to-r from-[#E35336] to-[#C83C21] text-slate-950 shadow-lg shadow-amber-500/20 ring-2 ring-[#EA7058]"
+                    ? "bg-gradient-to-r from-[#AF2324] to-[#921D1E] text-slate-950 shadow-lg shadow-[#AF2324]/20 ring-2 ring-[#AF2324]"
                     : "bg-slate-900/90 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800 shadow-xs"
                 )}
               >
@@ -213,7 +213,7 @@ export function OurWorkGallery() {
               <button
                 type="button"
                 onClick={() => setActiveItem(item)}
-                className="group relative h-full w-full overflow-hidden rounded-2xl bg-slate-950 shadow-md ring-1 ring-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:ring-[#E35336] "
+                className="group relative h-full w-full overflow-hidden rounded-2xl bg-slate-950 shadow-md ring-1 ring-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#AF2324] cursor-pointer transition-all duration-300 hover:shadow-2xl hover:ring-[#AF2324] "
               >
                 <ImageWithFallback
                   src={isVideoItem(item) ? item.poster : item.src}
@@ -224,7 +224,7 @@ export function OurWorkGallery() {
 
                 {/* Top Badge: Tag & Duration */}
                 <div className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3 flex items-center gap-1.5 flex-wrap max-w-[85%] z-10">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-slate-950/80 backdrop-blur-md text-[#E35336] border border-amber-400/30 shadow-xs">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold bg-slate-950/80 backdrop-blur-md text-[#AF2324] border border-[#AF2324]/30 shadow-xs">
                     {item.tag}
                   </span>
                   {isVideoItem(item) && item.duration && (
@@ -265,17 +265,17 @@ export function OurWorkGallery() {
             <button
               type="button"
               onClick={() => setIsExpanded(!isExpanded)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 border border-slate-700 shadow-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 border border-slate-700 shadow-md text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-white transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#AF2324]"
             >
               {isExpanded ? (
                 <>
                   <span>Show Featured Highlights Only</span>
-                  <ChevronDown className="size-4 rotate-180 transition-transform text-amber-400" />
+                  <ChevronDown className="size-4 rotate-180 transition-transform text-[#AF2324]" />
                 </>
               ) : (
                 <>
                   <span>View All {filteredItems.length} Proof-of-Work Projects &amp; Videos</span>
-                  <ChevronDown className="size-4 transition-transform text-amber-400" />
+                  <ChevronDown className="size-4 transition-transform text-[#AF2324]" />
                 </>
               )}
             </button>
@@ -345,7 +345,7 @@ export function OurWorkGallery() {
               <div className="p-5 sm:p-6 bg-neutral-900 border-t border-neutral-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="text-left space-y-1.5 max-w-2xl">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#AF2324]/20 text-[#AF2324] border border-[#AF2324]/30">
                       {activeItem.tag}
                     </span>
                     {isVideoItem(activeItem) && (

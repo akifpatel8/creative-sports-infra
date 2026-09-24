@@ -139,7 +139,7 @@ export function SportsProductsCatalog({
 
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
-              <Sparkles className="size-3.5 text-amber-400" />
+              <Sparkles className="size-3.5 text-[#AF2324]" />
               <span>Turnkey Sports Infrastructure</span>
             </div>
 
@@ -198,7 +198,7 @@ export function SportsProductsCatalog({
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="max-w-3xl">
                   <div className="flex items-center gap-2.5 flex-wrap mb-3">
-                    <span className="rounded-md bg-amber-500/20 border border-amber-400/40 px-2.5 py-1 text-xs font-bold text-amber-300">
+                    <span className="rounded-md bg-[#AF2324]/20 border border-[#AF2324]/40 px-2.5 py-1 text-xs font-bold text-[#AF2324]">
                       {selectedSport.badge}
                     </span>
                     <span className="text-xs text-slate-300 font-medium">
@@ -282,7 +282,7 @@ export function SportsProductsCatalog({
                     className={cn(
                       "inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm cursor-pointer",
                       isActive
-                        ? "bg-slate-950 text-white shadow-md ring-2 ring-[#E35336] ring-offset-2"
+                        ? "bg-slate-950 text-white shadow-md ring-2 ring-[#AF2324] ring-offset-2"
                         : "bg-slate-200/90 text-slate-800 border border-slate-300 hover:bg-slate-300/90 hover:border-slate-400"
                     )}
                   >
@@ -291,7 +291,7 @@ export function SportsProductsCatalog({
                       className={cn(
                         "rounded-full px-1.5 py-0.5 text-[10px] font-extrabold",
                         isActive
-                          ? "bg-[#E35336]  text-slate-950"
+                          ? "bg-[#AF2324]  text-slate-950"
                           : "bg-slate-300/80 text-slate-800"
                       )}
                     >
@@ -333,8 +333,8 @@ export function SportsProductsCatalog({
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
                         {/* Certification Badge Top Left */}
-                        <span className="absolute top-3 left-3 rounded-md bg-slate-950/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-[#E35336] border border-amber-400/30 shadow-md flex items-center gap-1.5">
-                          <ShieldCheck className="size-3 text-amber-400" />
+                        <span className="absolute top-3 left-3 rounded-md bg-slate-950/80 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-[#AF2324] border border-[#AF2324]/30 shadow-md flex items-center gap-1.5">
+                          <ShieldCheck className="size-3 text-[#AF2324]" />
                           {sport.badge}
                         </span>
 
@@ -398,7 +398,7 @@ export function SportsProductsCatalog({
             <Button asChild size="lg" className="bg-slate-950 hover:bg-slate-900 text-white font-bold px-8 py-6 rounded-xl text-base shadow-xl cursor-pointer">
               <Link to="/products">
                 Explore Full Technical Specifications
-                <ChevronRight className="size-5 ml-1 text-amber-400" aria-hidden />
+                <ChevronRight className="size-5 ml-1 text-[#AF2324]" aria-hidden />
               </Link>
             </Button>
           </div>

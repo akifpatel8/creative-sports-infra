@@ -15,10 +15,10 @@ const CERTIFICATIONS: CertificationLogo[] = [
     name: "World Athletics",
     sport: "Running Tracks",
     badgeText: "IAAF Certified",
-    color: "from-amber-500 to-orange-600",
+    color: "from-[#AF2324] to-[#AF2324]",
     renderIcon: () => (
       <svg viewBox="0 0 48 48" className="size-9 fill-none shrink-0" aria-label="World Athletics">
-        <circle cx="24" cy="24" r="22" className="stroke-amber-400" strokeWidth="2.5" />
+        <circle cx="24" cy="24" r="22" className="stroke-[#AF2324]" strokeWidth="2.5" />
         <path
           d="M13 28c3-7 8-11 13-11s9 4 12 11"
           className="stroke-white"
@@ -27,7 +27,7 @@ const CERTIFICATIONS: CertificationLogo[] = [
         />
         <path
           d="M15 33c3-5 6-8 10-8s8 3 11 8"
-          className="stroke-amber-400"
+          className="stroke-[#AF2324]"
           strokeWidth="2.5"
           strokeLinecap="round"
         />
@@ -103,12 +103,12 @@ const CERTIFICATIONS: CertificationLogo[] = [
     name: "FIBA Basketball",
     sport: "Basketball",
     badgeText: "FIBA Standard",
-    color: "from-orange-600 to-amber-600",
+    color: "from-[#AF2324] to-[#AF2324]",
     renderIcon: () => (
       <svg viewBox="0 0 48 48" className="size-9 fill-none shrink-0" aria-label="FIBA Basketball">
-        <circle cx="24" cy="24" r="22" className="stroke-orange-500" strokeWidth="2.5" />
+        <circle cx="24" cy="24" r="22" className="stroke-[#AF2324]" strokeWidth="2.5" />
         {/* Basketball seams */}
-        <circle cx="24" cy="24" r="17" className="stroke-orange-400 fill-orange-500/30" strokeWidth="2" />
+        <circle cx="24" cy="24" r="17" className="stroke-[#AF2324] fill-[#AF2324]/30" strokeWidth="2" />
         <line x1="7" y1="24" x2="41" y2="24" className="stroke-white" strokeWidth="2" />
         <line x1="24" y1="7" x2="24" y2="41" className="stroke-white" strokeWidth="2" />
         <path d="M12 12c7 7 7 17 0 24" className="stroke-white" strokeWidth="2" />
@@ -121,11 +121,11 @@ const CERTIFICATIONS: CertificationLogo[] = [
     name: "ITF Tennis",
     sport: "Tennis Courts",
     badgeText: "ITF Classified",
-    color: "from-yellow-500 to-emerald-600",
+    color: "from-[#AF2324] to-emerald-600",
     renderIcon: () => (
       <svg viewBox="0 0 48 48" className="size-9 fill-none shrink-0" aria-label="ITF Tennis">
-        <circle cx="24" cy="24" r="22" className="stroke-yellow-400" strokeWidth="2.5" />
-        <circle cx="24" cy="24" r="15" className="fill-yellow-400/30 stroke-yellow-400" strokeWidth="2" />
+        <circle cx="24" cy="24" r="22" className="stroke-[#AF2324]" strokeWidth="2.5" />
+        <circle cx="24" cy="24" r="15" className="fill-[#AF2324]/30 stroke-[#AF2324]" strokeWidth="2" />
         <path
           d="M13 19c6 1 10 5 11 11"
           className="stroke-white"
@@ -168,7 +168,7 @@ const CERTIFICATIONS: CertificationLogo[] = [
           d="M21 17l4 4-2 7 3 10h-2l-2.5-9-2.5 9h-2l2-11-3-4 1-5h3z"
           className="fill-white"
         />
-        <circle cx="27" cy="24" r="2.5" className="fill-amber-400" />
+        <circle cx="27" cy="24" r="2.5" className="fill-[#AF2324]" />
       </svg>
     ),
   },
@@ -209,7 +209,7 @@ const CERTIFICATIONS: CertificationLogo[] = [
         <rect x="14" y="14" width="20" height="20" rx="3" className="stroke-white fill-emerald-500/20" strokeWidth="2" />
         <line x1="14" y1="26" x2="34" y2="26" className="stroke-red-400" strokeWidth="2" />
         <line x1="24" y1="26" x2="24" y2="34" className="stroke-red-400" strokeWidth="1.5" />
-        <circle cx="20" cy="20" r="2" className="fill-yellow-300" />
+        <circle cx="20" cy="20" r="2" className="fill-[#AF2324]" />
       </svg>
     ),
   },
@@ -235,7 +235,7 @@ export function CertificationLogos({ className, theme = "dark" }: CertificationL
         <p
           className={cn(
             "text-xs sm:text-sm font-bold tracking-widest uppercase",
-            isDark ? "text-[#E35336]" : "text-blue-700"
+            isDark ? "text-[#AF2324]" : "text-blue-700"
           )}
         >
           Official Federation Standards &amp; Certified Flooring

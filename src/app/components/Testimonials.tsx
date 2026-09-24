@@ -36,8 +36,8 @@ export function Testimonials() {
     <section className="py-20 px-4 sm:px-6 bg-slate-100/90 border-t border-slate-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300/80 text-amber-900 text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
-            <Star className="size-3.5 fill-amber-500 text-amber-500" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8E9E9] border border-[#AF2324]/80 text-[#AF2324] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+            <Star className="size-3.5 fill-[#AF2324] text-[#AF2324]" />
             <span>Verified Institutional Reviews</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
@@ -52,13 +52,13 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-7 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 border-l-4 border-l-amber-500 relative flex flex-col justify-between"
+              className="bg-white p-7 sm:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200 border-l-4 border-l-[#AF2324] relative flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={18} className="fill-amber-400 text-amber-400" />
+                      <Star key={i} size={18} className="fill-[#AF2324] text-[#AF2324]" />
                     ))}
                   </div>
                   <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -67,7 +67,7 @@ export function Testimonials() {
                   </span>
                 </div>
 
-                <Quote className="size-8 text-amber-200 mb-2 rotate-180" />
+                <Quote className="size-8 text-[#AF2324] mb-2 rotate-180" />
                 <p className="text-slate-700 mb-6 italic text-sm sm:text-base leading-relaxed">
                   "{testimonial.content}"
                 </p>
